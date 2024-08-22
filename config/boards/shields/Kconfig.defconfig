@@ -1,0 +1,16 @@
+if SHIELD_WIZKEY_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Wizkey"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_WIZKEY_LEFT || SHIELD_WIZKEY_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif
