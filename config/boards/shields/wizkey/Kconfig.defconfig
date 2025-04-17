@@ -5,12 +5,21 @@ config ZMK_KEYBOARD_NAME
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
+    
+endif
 
+if SHIELD_WIZKEY_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "Wizkey Right"
+    
+# Right half is peripheral by default, so no need to specify
+    
 endif
 
 if SHIELD_WIZKEY_LEFT || SHIELD_WIZKEY_RIGHT
 
 config ZMK_SPLIT
     default y
-
+    
 endif
